@@ -404,7 +404,7 @@ $$
 
 Now, let us take a closer look at equation 3 and try to interpret it geometrically. Observing figure [1](#fig:geom_inter), if we consider a point $x_0$ and transform it into $z_0$ using a function $f$, the slope of $f$ at $x_0$ ($\\frac{d{z}}{d{x}}(x_0)$) multiplied by the pdf of $z_0$ ($p(z_0)$) equals the pdf of $x_0$, which gives equation 3.
 
-![Geometric Interpretation {#fig:geom_inter width="80%"}](/src/assets/img/interpretazione_geometrica.png)
+![Geometric Interpretation {#fig:geom_inter width="80%"}](/abdula_kalus/img/interpretazione_geometrica.png)
 
 Equation 3, namely
 
@@ -431,15 +431,15 @@ $$
 
 We know that the term $|\\frac{d{z}}{d{x}}|$ is the model we want to train, but we do not know the pdf of $z$. What we can do is choose the pdf of $z$ that we want to have, for example, uniform.
 
-![Geometric interpretation {#fig:trick_uniforme width="80%"}](/src/assets/img/trick_uniforme.png)
+![Geometric interpretation {#fig:trick_uniforme width="80%"}](/abdula_kalus/img/trick_uniforme.png)
 
 Then, we try to find the correct function $f$ that gives the desired distribution. By maximizing the sum
 $\\log(p(z)) + \\log{\\left(|\\frac{d{z}}{d{x}}|\\right)}$, we maximize the log likelihood of $x$ and also learn to map $x$ into a uniform distribution $Z$. Here we assume we want to see a uniform distribution.
 
 Below we can observe more clearly how $X$ is transformed into $Z$ before and after training.
 
-![Transformation before {#fig:transform_ba_1 width="40%"}](/src/assets/img/trasnformation_ba_1.png)
-![Transformation after {#fig:transform_ba_2 width="40%"}](/src/assets/img/trasnformation_ba_2.png)
+![Transformation before {#fig:transform_ba_1 width="40%"}](/abdula_kalus/img/trasnformation_ba_1.png)
+![Transformation after {#fig:transform_ba_2 width="40%"}](/abdula_kalus/img/trasnformation_ba_2.png)
 
 *Figure – Transformation before and after training*
 
@@ -490,13 +490,13 @@ We want to learn the mean and standard deviation of these CDFs, as well as the w
 to obtain the function that maximizes $p(x)$ while making $p(z)$ as close as possible to uniform.  
 Note that this function takes values between 0 and 1.
 
-![Sum of CDFs {#fig:cdfs_sums width="80%"}](/src/assets/img/cdfs_sums.png)
+![Sum of CDFs {#fig:cdfs_sums width="80%"}](/abdula_kalus/img/cdfs_sums.png)
 
 Now fixing $p(z)$ to be uniform, we maximize the sum
 $\\log(p(z)) + \\log{\\left(|\\frac{d{z}}{d{x}}|\\right)}$. This gives us a function
 $f$ that maximizes $p(x)$ while making $p(z)$ as close as possible to uniform. [5](#fig:cdfs_sums_unif)
 
-![Sum of CDFs with uniform $p(z)$ {#fig:cdfs_sums_unif width="80%"}](/src/assets/img/cdfs_sums_unif.png)
+![Sum of CDFs with uniform $p(z)$ {#fig:cdfs_sums_unif width="80%"}](/abdula_kalus/img/cdfs_sums_unif.png)
 
 Let us now break down the expression
 $\\log(p(x)) = \\log(p(z)) + \\log{\\left(|\\frac{d{z}}{d{x}}|\\right)}$ into smaller components.  
@@ -526,7 +526,7 @@ The first term $p(z)$ is instead $Uniform(0,1)$.
 
 This leads to the following expression to maximize, where all components are known:
 
-![Expression to maximize {#fig:expr_max width="80%"}](/src/assets/img/expr_max.png)
+![Expression to maximize {#fig:expr_max width="80%"}](/abdula_kalus/img/expr_max.png)
 
 Maximizing the expression in [6](#fig:expr_max) is equivalent to minimizing the negative of the expression.
 
@@ -596,7 +596,7 @@ $$
 This gives the relation between $p(x)$ and $p(z)$.  
 We can generalize this to any number of transformations, so if we have $n$ transformations, the expression relating $p(x)$ and $p(z)$ is:
 
-![Relation between $p(x)$ and $p(z)$ {#fig:multiple_transf width="80%"}](/src/assets/img/multiple_transf.png)
+![Relation between $p(x)$ and $p(z)$ {#fig:multiple_transf width="80%"}](/abdula_kalus/img/multiple_transf.png)
 
 Recall that the functions $f_i$ must be bijective/invertible.  
 For the simple case with a single transformation, we used the class of CDF functions, and we will use them again. However, there is an issue when applying a CDF continuously over all transformations.  
@@ -651,7 +651,7 @@ From this, we derive the relation between $p(x)$ and $p(y)$.
 To summarize, the entire flow looks like in figure [8](#fig:flow_looks),  
 where we start from variable $\\mathcal{X}$ with domain $R$, map it to $\\mathcal{Z}_1$ using a CDF (domain $[0,1]$), then map it back to $R$ with the logit function, etc.
 
-![Relation between $p(x)$ and $p(z)$ {#fig:flow_looks width="80%"}](/src/assets/img/flow_looks.png)
+![Relation between $p(x)$ and $p(z)$ {#fig:flow_looks width="80%"}](/abdula_kalus/img/flow_looks.png)
 
 We want the final output to have a uniform distribution.  
 By applying the following formula, we maximize the right-hand side expression, which maximizes the log likelihood of $\\mathcal{X}$:
@@ -789,7 +789,7 @@ Through this approach, we seek to enhance our understanding of evolutionary mech
 This thesis employs the **Approximate Bayesian Computation (ABC)** algorithm for parameter inference, using **rRACES** to generate synthetic data for analysis.  
 Figure 1 illustrates the full rRACES simulation pipeline.
 
-![rRACES pipeline {#fig:rraces_pipeline width="80%"}](/src/assets/img/rraces_pipeline.png)
+![rRACES pipeline {#fig:rraces_pipeline width="80%"}](/abdula_kalus/img/rraces_pipeline.png)
 
 ### rRACES
 
