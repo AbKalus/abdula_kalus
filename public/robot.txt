@@ -10,4 +10,4 @@
 User-agent: *
 
 # Sitemap
-Sitemap:
+Sitemap: https://abkalus.github.io/abdula_kalus/sitemap.xml
